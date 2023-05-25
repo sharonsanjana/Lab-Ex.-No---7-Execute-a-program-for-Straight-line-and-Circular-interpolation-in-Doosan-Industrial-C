@@ -1,55 +1,62 @@
-# Lab-Ex.-No---7-Execute-a-program-for-Straight-line-and-Circular-interpolation-in-Doosan-Industrial-cobot
-## Aim : To Execute a program for Straight-line and Circular interpolation in Doosan Industrial Cobot using DRL studio.
-
-## Components Required:
-
-*Doosan Industrial Collaborative Robot
-
-*DRL (Doosan Robotics Language) Studio Software
-
-### Theory 
-INTERPOLATION
-
-Interpolation, which is necessary for any type of programming, consists of generating data points between given coordinate axis positions. Within the Machine Control Unit (MCU), a device called an interpolator causes the drives to move simultaneously from the start to the end of the command. The interpolator is either an electronic hardware device for a NC system, or a software program for a CNC system. An interpolator provides two functions:
-
-It calculates individual axis velocities to drive the tool along the programmed path at the given feed rate.
-
-It generates thousands of intermediate coordinate points along the programmed path between the start point and the end point of the cut.
-
-During positioning, all programmed axes move simultaneously at the specified feed rates until each axis has reached its destination. All drives start together, but without an interpolator individual destinations are reached successively according to the path traveled. However, an interpolator coordinates these axis motions in such a way that the programmed path is constantly maintained from the beginning to the end of the movement.
-
-Linear and circular interpolation are most commonly used in CNC programming applications:
-
-Linear interpolation is used for straight-line machining between two points.
-
-Circular interpolation is used for circles and arcs.
-
-Helical interpolation, used for threads and helical forms, is available on many CNC machines.
-
-Parabolic and cubic interpolation are used by industries that manufacture parts having complex shape such as aerospace parts, and...
-
-## Procedure:
-
-Manipulate the end effector as per the given configuration. Movement Should Initiate in P1 and progress till the end point. Travel path should be in sequence as stated below.
-
-Linear Interpolation
-
-
-
-
-
-
-
-
-Circular Interpolation
-
-### output
-
-
-
-
-### Results 
-
-
+# Inverse-kinematic-modeling-using-robo-analyzer-
 
  
+## AIM: 
+To analyze the inverse kinematics using DH parameters for a 3 dof planer and 3 dof articulated robot using roboanalyzer and polt the graph of joint angle for a given  input end effector position .
+
+
+### COMPONENTS REQUIRED:
+1.Robo analyzer software  
+
+
+### THEORY: 
+  
+### Inverse Kinematics
+ 
+
+Inverse kinematics is the use of kinematic equations to determine the motion of a robot to reach a desired position. For example, to perform automated bin picking, a robotic arm used in a manufacturing line needs precise motion from an initial position to a desired position between bins and manufacturing machines. The grasping end of a robot arm is designated as the end-effector. The robot configuration is a list of joint positions that are within the position limits of the robot model and do not violate any constraints the robot has.
+
+ Most industrial robots are constructed of several independently controllable articulated joints. Each joint is connected to one or more of the other joints, sometimes in complex configurations. The end effector is attached at the end of the entire “kinematic chain”. When you move any one joint, this will affect the end effector’s pose in various ways.
+
+This means that there is no simple, direct relationship between the end effector position and any one particular joint.
+
+For example, if you want the robot’s end effector to move 1 mm linearly along the Z-axis, you may need to move all of the joints by a different amount.
+
+Finally, inverse kinematics algorithms calculate the exact position of each of the robot’s joints required to reach your desired end effector pose.
+
+### solving inverse kinematic model 
+![image](https://user-images.githubusercontent.com/36288975/170622829-3fe97ef7-8ef1-44af-afae-b0954871aa0c.png)
+
+
+![image](https://user-images.githubusercontent.com/36288975/170622902-f48fd9c7-f2ec-4fd5-904b-ea51be8298c3.png)
+
+![image](https://user-images.githubusercontent.com/36288975/170622934-a3fd7f77-7eb2-4408-b66d-d6e3adbd1f99.png)
+
+![image](https://user-images.githubusercontent.com/36288975/170622982-9c4d8b23-1563-4e17-9616-87bcc4f4501d.png)
+![image](https://user-images.githubusercontent.com/36288975/170623020-f27efc12-bb58-4f62-840d-af544ac6689e.png)
+
+### PROCEDURE:
+
+1.open the roboanalyzer software.
+2.select the robot and its degrees of freedom. 
+3.change the values of X and Y wherever necessary.
+4.simulate the model for inverse kinematics.
+5.plot the graph between the joints. 
+6.update the DH parameters of the link configuration and end effector configuration
+
+
+
+
+
+
+### SIMULATION 
+ 
+ 
+ ![image](https://github.com/VismayaNair/Inverse-kinematic-modeling-using-robo-analyzer-/assets/93427210/4bfb7431-9718-4b2d-917f-d9ecf939279e)
+
+ 
+ 
+
+
+
+### RESULTS :  Thus,the inverse kinematics using DH parameters for a 3 dof planer and 3 dof articulated robot using roboanalyzer is analysed and the graph of joint angle for a given input end effector position is plotted.
